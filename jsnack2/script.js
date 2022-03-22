@@ -81,3 +81,20 @@ for (let i = 0; i < zucchine.length; i++) {
 console.log('Over: ', zucchineOver);
 
 console.log('Under: ', zucchineUnder)
+
+let pesoTotaleZucchineOver = 0;
+
+let pesoTotaleZucchineUnder = 0;
+
+
+for (let i = 0; i < zucchineOver.length; i++) {
+    pesoTotaleZucchineOver += zucchineOver[i].peso;
+}
+
+console.log('Peso totale zucchine Over: ', pesoTotaleZucchineOver);
+
+for (let i = 0; i < zucchineUnder.length; i++) {
+    pesoTotaleZucchineUnder += zucchineUnder[i].peso;
+}
+
+console.log('peso totale zucchine Under', pesoTotaleZucchineUnder);
