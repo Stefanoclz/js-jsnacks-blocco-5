@@ -3,8 +3,6 @@ console.log('JS OK');
 // Scrivi una funzione che accetti una stringa come argomento
 // e la ritorni girata (es. Ciao -> oaiC)
 
-let userWord = prompt('Inserisci la parola per ottenerla invertita');
-
 function reverse(word) {
 
     let splitWord = word.split("");
@@ -16,7 +14,19 @@ function reverse(word) {
     return arrayToString;
 }
 
+let reversed = document.getElementById('reverse');
 
-let reverseWord = reverse(userWord);
+const avviaBtn = document.getElementById('calcola');
 
-console.log(reverseWord);
+
+
+avviaBtn.addEventListener('click', function () {
+
+    let userWord = document.getElementById('word').value;
+
+    let reverseWord = reverse(userWord);
+
+    console.log(reverseWord);
+
+    reversed.innerText = `L'inverso della parola inserita è: ${reverseWord}`;
+})
